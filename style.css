@@ -1,0 +1,21 @@
+ul{
+	list-style: none;
+	margin: 0;
+	padding:0;
+	background: red;
+	overflow: hidden;
+}
+
+
+
+ul li a{
+	text-decoration: none;
+	border: 1px solid;
+	padding: 14px 18px;
+	display: block;
+	color:white;
+}
+
+ul li{
+	float: left;
+}
