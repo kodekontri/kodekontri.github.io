@@ -1,21 +1,85 @@
-ul{
-	list-style: none;
-	margin: 0;
-	padding:0;
-	background: red;
-	overflow: hidden;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-
-ul li a{
-	text-decoration: none;
-	border: 1px solid;
-	padding: 14px 18px;
-	display: block;
-	color:white;
+.container{
+    margin: 30px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-ul li{
-	float: left;
+#calculator{
+    min-height: 100px;
+    background-color: rgb(194, 72, 42);
+    max-width: 500px;
+    width:21%;
+    padding: 5px;
+}
+
+#calculator #screen{
+    min-height: 5rem;
+    background-color: #fff;
+    font-size: 3rem;
+    padding: .5rem;
+    margin: 10px auto;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn{
+    padding:5px 10px;
+    /* min-height: 50px; */
+    width:60px;
+    height: 60px;
+    font-size: 1rem;
+    background-color: rgb(34, 10, 9);
+    color: wheat;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    margin: 10px 1px;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn::before{
+    content: '';
+    display: block;
+     background-color: rgba(34, 10, 9, 0.678);
+    position: absolute;
+    /* padding:20px; */
+    height: 0px;
+    width: 100px;
+    bottom: 0%;
+    left: 50%;
+    border-radius: 30%;
+    transform-origin: bottom;
+    transform:translatex(-50%);
+    transition: all .3s;
+}
+
+.btn:hover::before{
+    background-color: rgba(34, 10, 9, 0.9);
+    height: 100px;
+    bottom: 0;
+    /* transform: translateY(260px); */
+}
+
+.btn:hover{
+    color: rgb(34, 10, 9);
+    background-color: wheat;
 }
